@@ -14,7 +14,7 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.primitives import padding as sym_padding
 
 
-SERVER_URL = "http://10.10.1.4:5000"  # Ajuste conforme necessário
+SERVER_URL = "http://10.10.1.17:6000"  # Ajuste conforme necessário
 
 def generate_random_key():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=16))
@@ -197,7 +197,6 @@ def conectar_com_destinatario():
         primeira_mensagem = False
 
 def enviar_mensagem():
-    global cliente, chave_aes
     ip = ip_entry.get()
     mensagem = msg_entry.get()
 

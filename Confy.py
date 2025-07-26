@@ -11,7 +11,7 @@ def init_db():
                         id INTEGER PRIMARY KEY AUTOINCREMENT,
                         key TEXT UNIQUE,
                         ip TEXT,
-                        timestamp INTEGER
+                        timestamp INTEGERrno
                     )''')
     conn.commit()
     conn.close()
@@ -63,4 +63,4 @@ def cleanup():
 
 if __name__ == '__main__':
     init_db()
-    app.run(host='10.10.1.4', port=5000, debug=True)
+    app.run(host='10.10.1.7', port=5000, debug=True)

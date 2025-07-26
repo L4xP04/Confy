@@ -4,7 +4,7 @@ import requests
 import random
 import string
 
-SERVER_URL = "http://10.10.1.5:5000"  # Ajuste conforme necessário
+SERVER_URL = "http://10.10.1.17:5000"  # Ajuste conforme necessário
 
 def generate_random_key():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=16))

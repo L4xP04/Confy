@@ -1,5 +1,6 @@
 import customtkinter as ctk
 from PIL import Image, ImageTk
+import os
 
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("blue")
@@ -14,6 +15,12 @@ class AplicacaoPrincipal(ctk.CTk):
 
         # Carrega a logo uma vez
         self.logo_image = self.carregar_logo("logo.png")
+
+        # self.logo_icone = self.iconphoto(False, ImageTk.PhotoImage(file='logo.png'))
+        self.iconpath = ImageTk.PhotoImage(file="logo.ico")
+        self.wm_iconbitmap()
+        self.iconphoto(False, self.iconpath)
+
 
         # Cria os dois frames (telas)
         self.tela_inicial = TelaInicial(self)
